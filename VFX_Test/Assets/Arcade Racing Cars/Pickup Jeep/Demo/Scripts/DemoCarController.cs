@@ -10,7 +10,7 @@ namespace Lowscope.ARC
 
         [SerializeField] private Transform[] wheels = null;
         [SerializeField] private Rigidbody rigidBody = null;
-        [SerializeField] private GameObject farCam = null;
+        //[SerializeField] private GameObject farCam = null;
         [SerializeField] private MeshRenderer carBase = null;
 
         [SerializeField] private float maxWheelRotation = 40f;
@@ -64,14 +64,14 @@ namespace Lowscope.ARC
 
             currentAccelerationTime = Mathf.Clamp(currentAccelerationTime, -accelerationTime, accelerationTime);
 
-            if (vertical >= 1)
-            {
-                farCam.gameObject.SetActive(true);
-            }
-            else
-            {
-                farCam.gameObject.SetActive(false);
-            }
+            //if (vertical >= 1)
+            //{
+            //    farCam.gameObject.SetActive(true);
+            //}
+            //else
+            //{
+            //    farCam.gameObject.SetActive(false);
+            //}
 
             addedRotation += currentAccelerationTime;
 
