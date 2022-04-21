@@ -67,12 +67,14 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
+    - _OutlineThicknessMultiplier: 1
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
+    - _SpeedMultiplier: 1
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
