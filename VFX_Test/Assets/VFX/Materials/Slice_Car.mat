@@ -67,7 +67,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
-    - _OutlineThicknessMultiplier: 1
+    - _OutlineThicknessMultiplier: 0.838
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
