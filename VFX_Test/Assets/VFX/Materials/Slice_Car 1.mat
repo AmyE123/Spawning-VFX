@@ -64,15 +64,22 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
+    - _EmissionMultiplier: 10000
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
+    - _OutlineDivisibleOverride: 5.32
+    - _OutlineThickness: 0.82
+    - _OutlineThicknessMultiplier: 0.65
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
+    - _Rotation: 0
+    - _Spawn: 0
+    - _SpeedMultiplier: 1
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0
@@ -86,6 +93,8 @@ Material:
     - _StencilWriteMaskMV: 40
     - _SupportDecals: 1
     - _SurfaceType: 1
+    - _SwipeSpeed: 7
+    - _SwipeSpeed_Glow: -3.5
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -103,6 +112,8 @@ Material:
     - _Colour: {r: 3.0157065, g: 31.999996, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GlowColour: {r: 0.75392663, g: 7.999999, b: 0, a: 1}
+    - _TextureColour: {r: 1, g: 1, b: 1, a: 1}
     - _Texture_Colour: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &7504660697873811779
