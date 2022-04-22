@@ -69,7 +69,7 @@ Material:
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
     - _OutlineDivisibleOverride: 5.32
-    - _OutlineThickness: 0.65
+    - _OutlineThickness: 0.82
     - _OutlineThicknessMultiplier: 0.65
     - _RayTracing: 0
     - _ReceivesSSR: 1
