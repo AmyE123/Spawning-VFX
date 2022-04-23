@@ -13,7 +13,8 @@ public class VisualEffectController : MonoBehaviour
     public Degree Rotation;
 
     [Header("Particle Properties")]
-    [SerializeField] private ParticleSystem _particleSpawningParticles;    
+    [SerializeField] private ParticleSystem _particleSpawningParticles;
+    [SerializeField] private Material _particleMaterial;
     [SerializeField] [ColorUsage(true, true)] private Color _particleColour;
 
 
@@ -57,8 +58,7 @@ public class VisualEffectController : MonoBehaviour
 
     void SetVFXColour()
     {
-        var particle = _particleSpawningParticles.main;
-        particle.startColor = _particleColour;
+        _particleMaterial.SetColor("_GlowColour", _particleColour);
 
         foreach (Material m in _shaderMaterialInstances)
         {
