@@ -40,6 +40,8 @@ public class VisualEffectController : MonoBehaviour
     {
         int eValue = (int)Rotation;
 
+        _particleMaterial.SetFloat("_Rotation", eValue);
+
         foreach (Material m in _shaderMaterialInstances)
         {
             m.SetFloat("_Rotation", eValue);

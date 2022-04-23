@@ -386,7 +386,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e931c06f5394f948a635117e91d7ddb, type: 2}
   - {fileID: 11400000, guid: ae74570131722644ca44a452ba61d351, type: 2}
   Rotation: 0
-  _particleSpawningParticles: {fileID: 0}
+  _particleSpawningParticles: {fileID: 1471339988}
   _particleMaterial: {fileID: 2100000, guid: 8f6b197d308ca504f9a9287c1fd07a6a, type: 2}
   _particleColour: {r: 511.99994, g: 24.125652, b: 0, a: 1}
   _shaderMaterialInstances: []
@@ -604,6 +604,12 @@ Transform:
 --- !u!4 &1471339986 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6341288184993033133, guid: c6746f7e493cd6c449e820af80cd4672,
+    type: 3}
+  m_PrefabInstance: {fileID: 1630737677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1471339988 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5559619990499816449, guid: c6746f7e493cd6c449e820af80cd4672,
     type: 3}
   m_PrefabInstance: {fileID: 1630737677}
   m_PrefabAsset: {fileID: 0}
