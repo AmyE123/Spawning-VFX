@@ -77,7 +77,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Rotation: 0
+    - _Rotation: 90
     - _SpeedMultiplier: 1
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -111,7 +111,7 @@ Material:
     - _Colour: {r: 3.0157065, g: 31.999996, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColour: {r: 0.75392663, g: 7.999999, b: 0, a: 1}
+    - _GlowColour: {r: 2, g: 0, b: 0, a: 1}
     - _TextureColour: {r: 0, g: 0, b: 0, a: 0}
     - _Texture_Colour: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -68,14 +68,14 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
-    - _OutlineThickness: 0.746
+    - _OutlineThickness: 0.65
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Rotation: 0
+    - _Rotation: 90
     - _SpeedMultiplier: 1
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -105,7 +105,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColour: {r: 1.5078533, g: 15.999998, b: 0, a: 1}
+    - _GlowColour: {r: 2, g: 0, b: 0, a: 1}
     - _TextureColour: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &5687558833784938282
