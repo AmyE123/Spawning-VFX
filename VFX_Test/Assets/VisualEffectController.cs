@@ -16,7 +16,7 @@ public class VisualEffectController : MonoBehaviour
     [SerializeField] private ParticleSystem _particleSpawningParticles;
     [SerializeField] private Material _particleMaterial;
     [SerializeField] [ColorUsage(true, true)] private Color _particleColour;
-
+    [SerializeField] private int _particleRate = 200;
 
     [Header("Shader Properties")]
     [SerializeField] private List<Material> _shaderMaterialInstances;
@@ -34,6 +34,12 @@ public class VisualEffectController : MonoBehaviour
         {
             _shaderMaterialInstances.Add(mr.material);
         }
+    }
+
+    void SetParticleRate()
+    {
+        var emission = _particleSpawningParticles.emission;
+        emission.rateOverTime = _particleRate;
     }
 
     void SetVFXRotation()
@@ -75,6 +81,7 @@ public class VisualEffectController : MonoBehaviour
         {
             SetVFXColour();
             SetVFXRotation();
+            SetParticleRate();
         }
 
 
