@@ -90,8 +90,14 @@ Like mentioned in the planning art, it wasn’t until later that I realised ther
 It wasn’t too hard to do this, as I broke down a basic plan: I had to make a new outline and slightly offset it on the shader, so I could use the original edge outline shader for the cube pattern, so it would look like the cubes were coming off of the bottom outline.
 So, I played around with noise shaders for a bit, until I got a cube pattern that I liked, and then I had to figure out how to plug that into the edge outline, and after some playing around with the nodes, all I had to do was plug the pattern of the cubes into the edge outline using a multiply node, and then that would cut the cubes out from the edge outline, and then I used the add node to add the offset outline and cubes outline together.
 
+#### Rotation On The Shader
+I wanted to be able to use this shader from any angle. I can currently rotate the swipe part of the shader at any angle, but because of how I made the cube edges and the outline, it gets harder to swipe those well from a good angle, and it's mainly because for the outline and cube edges, I use the height parameter to move the cubes and outline along with the swipe.
+I managed to figure out how to get a perfect up and down swipe, as well as a 90 degree swipe for now, by using magic numbers, but it's not the best solution at all, it's not logical, and it's generally a mess, if I were to approach this again, I would think about the rotation much sooner.
 
-#### Refactoring
+#### Cleaning Up The Shader
+<img src="Screenshots/Clean_Shader.png" alt="Cubes Shader" style="width:100%" align="center"/>
+I added parameters on areas which I think the user should be able to customize, colours, textures, thickness of lines, speeds of swipes and rotations, amongst a few.
+And to make the shader easier for another person to understand, I added sticky notes, and documented the shader, much like I would document code!
 
 #### Analysis
 
