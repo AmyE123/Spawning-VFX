@@ -12,13 +12,14 @@ Material:
     type: 3}
   m_ValidKeywords:
   - _ALPHATEST_ON
+  - _DISABLE_DECALS
   - _DISABLE_SSR_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   - _TRANSPARENT_WRITES_MOTION_VEC
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
@@ -61,21 +62,21 @@ Material:
     - _CullModeForward: 2
     - _DepthOffsetEnable: 0
     - _DoubleSidedEnable: 0
-    - _DoubleSidedGIMode: 0
+    - _DoubleSidedGIMode: 1
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _EmissionMultiplier: 10000
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 0
     - _OpaqueCullMode: 2
-    - _OutlineThickness: 0.65
+    - _OutlineThickness: 0.7
     - _RayTracing: 0
     - _ReceivesSSR: 1
     - _ReceivesSSRTransparent: 0
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Rotation: 90
+    - _Rotation: 0
     - _SpeedMultiplier: 1
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -88,7 +89,7 @@ Material:
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 14
     - _StencilWriteMaskMV: 40
-    - _SupportDecals: 1
+    - _SupportDecals: 0
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
@@ -103,7 +104,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColour: {r: 2, g: 0, b: 0, a: 1}
     - _TextureColour: {r: 1, g: 1, b: 1, a: 1}
