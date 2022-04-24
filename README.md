@@ -78,13 +78,18 @@ To move the height, I used the time node, and I multiplied the sine time by a va
 Doing this resulted in the swiping up and down effect which I wanted!
 
 #### Glow Shader
-<img src="Screenshots/Glow_Outline_Shader.png" alt="Swipe Shader" style="width:100%" align="center"/>
+<img src="Screenshots/Glow_Outline_Shader.png" alt="Glow Outline Shader" style="width:100%" align="center"/>
 To add the glow on the outline of the swipe, I done something a little like the initial swipe.
 Similar to the initial wipe, I used the rectangle node, which had tiling and offset passed through the UVs as well as position, which was also on space mode ‘object’
 For this, the rectangles height was set to a value, instead of passed through time like the initial wipe, doing this allowed me to make the rectangle line thinner, and then I instead passed multiply and time into the tiling and offset ‘offset’ pin for the glow outline.
 For the appearance of the outline, I used a multiply node, and multiplied the rectangle by colour, so this would allow me to set any colour for the glow line. And then, I multiplied this again by the rectangle of the initial swipe, which cut off any extra parts of the glowing outline which I didn’t need which just left us with a line for the outline, and then this was passed into the emission node.
 
 #### Adding In The Edge Cubes
+<img src="Screenshots/Cubes_Shader.png" alt="Cubes Shader" style="width:100%" align="center"/>
+Like mentioned in the planning art, it wasn’t until later that I realised there was little cubes on the shader itself, so this was added once the basic swipe and edge glow shader was done.
+It wasn’t too hard to do this, as I broke down a basic plan: I had to make a new outline and slightly offset it on the shader, so I could use the original edge outline shader for the cube pattern, so it would look like the cubes were coming off of the bottom outline.
+So, I played around with noise shaders for a bit, until I got a cube pattern that I liked, and then I had to figure out how to plug that into the edge outline, and after some playing around with the nodes, all I had to do was plug the pattern of the cubes into the edge outline using a multiply node, and then that would cut the cubes out from the edge outline, and then I used the add node to add the offset outline and cubes outline together.
+
 
 #### Refactoring
 
