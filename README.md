@@ -194,12 +194,11 @@ For the shader for the cookie cutout I would do the following things:
 1. Have the same shader I currently have, but instead move the swipe on a float parameter instead of the time node.
 2. Apply the material shader to the model.
 3. Make a cube which will act as the `cut out`
-4. There are multiple approaches on how to do this next section
-   * Could add a script onto `cut out cube/mesh` which grabs the materials/model/tags for whatever items which needs to be spawned/despawned, and depending on the location of the cut out cube relative to the item being effected, it adjusts the amount cut out from the shader, this could be expensive if done on an update function as it would always be checking for collision, so to optimize this, there are a few different ways.
+4. Add a script onto `cut out cube/mesh` which grabs the materials/model/tags for whatever items which needs to be spawned/despawned, and depending on the location of the cut out cube relative to the item being effected, it adjusts the amount cut out from the shader, this could be expensive if done on an update function as it would always be checking for collision, so to optimize this, there are a few different ways:
       * The shader could be cut out at a particular time, like when a specific function is called, so it's not checking when it doesn't need to.
       * Another approach which I think is alot better is if the cube touches either the top or the bottom of the mesh, it would spawn/despawn depending on where it touches and it could be cut out using a lerp instead of the actual cut out cube, and this could be calculated by getting the midpoint location of the mesh and calculating whether the cube is above or below that, or the cube could always be in the middle of the mesh, and if it moves up or down, it either spawns or despawns, and then snaps back into the middle so the user can do that again once the animation has finished playing.
       * The same could be done just by calling a function in a script without even using a cube if we have access to the swipe float parameter on the shader.
-         * I would personally use a package in the Unity Asset Store called [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) to control how the shader swipes as it's got a whole library of really nice tweens to use!
+           * I would personally use a package in the Unity Asset Store called [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) to control how the shader swipes as it's got a whole library of really nice tweens to use!
 
 #### Particle Ideas For Cookie Cutout
 If I have access to the swipe float parameter, I would use the Unity Animator to animate whether the particle is active or not and where the particles are, I feel this would give so much more impact to the feel of the VFX as I would be able to play around with timing of the whole effect alot more.
