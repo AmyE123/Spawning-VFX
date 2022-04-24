@@ -58,9 +58,12 @@ One of the main things I noticed is the pattern which the particles are taking, 
 
 ##### Different Approaches & Optimizations Demonstration
 <img src="Concept_Art/Concept_Art_Different_Approaches.png" alt="Different Approaches" style="width:100%" align="center"/>
-Once I had finished the VFX, I was thinking of how I could improve and optimize it, as well as other approaches I could take, and I talk about this in more detail in the [How I Would Improve and Optimize The Current Visual FX](#how-i-would-improve-and-optimize-the-current-visual-fx) section, and the [A Different Approach Cookie Cutout](#a-different-approach-cookie-cutout) section of this document, but you can see the rough ideas here!
+Once I had finished the VFX, I was thinking of how I could improve and optimize it, as well as other approaches I could take, and I talk about this in more detail in the `How I Would Improve and Optimize The Current Visual FX` section, and the `Different Approach Cookie Cutout` section of this document, but you can see the rough ideas here!
 
 #### Analysis
+Overall, I think making sketches like this helps me out a lot with planning out creative projects, whether that be 3D, UI or VFX, and it doesn't take me long either!
+If I hadn't been planning out the different parts of the VFX, I wouldn't have noticed the things like the small cubes on the shader, or the pattern of travel that the particles take.
+Although, I do wish I thought of the different approaches I could take before I picked the first one which came to mind, as I think it would've been good to think about that earlier, and in a professional environment, I could talk to my coworkers about what they would prefer, as they could be using it one day as well!
 
 ### Creating The Shader
 
