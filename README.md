@@ -14,9 +14,9 @@ A test for FreeJam for the Junior VFX role
 
     * [Developing and Presenting the Project](#developing-and-presenting-the-project)
 
-    * [How I Would Improve and Optimize The Current Visual FX](#how-i-would-improve-and-optimize-the-current-visual-fx)
+    * [How I Would Improve, Change and Optimize The Current Visual FX](#how-i-would-improve-change-and-optimize-the-current-visual-fx)
         
-    * [A Different Approach Cookie Cutout](#a-different-approach-cookie-cutout)
+    * [A Different Approach: Cookie Cutout](#a-different-approach-cookie-cutout)
                         
 4. [Getting Started](#getting-started)
     * [Prerequisites](#prerequisites)
@@ -160,31 +160,49 @@ Due to the rotation using [*magic numbers*](https://en.wikipedia.org/wiki/Magic_
 The Rotation parameter is just an enum of the different rotations which the player can pick between.
 If I were to approach this again, I would like rotation to be on a slider with a range 0 to 90, so the player can pick any angle for the rotation of the VFX.
 
-##### Shader and Particle Colours and Particle Rate
+##### Shader, Particle Colours and Particle Rate
 These are pretty self-explainatory, but the colour parameters set the Shader and Particle colours, you could have these two completely different colours, or the same, the choice is up to the user!
 The particle rate controls the number of particles, and the default value is 500, as I think that looks best!
 
 #### Scene Presentation
+-- EMPTY
 
-#### Use of Source Control
+#### Project Management and Use of Source Control
+I decided it might a good idea to use source control for this project, so I could make use of all the different tools it offers, it also helps show my workflow and how I approach this test in a bit more detail.
+To break down my tasks so I'm not working on multiple things at the same time, I use the 'Issues' part of the Git Repository, and make myself tickets for each specific thing I need to do for this test, it also allows me to comment on the ticket with things that I want to change, or just make notes. You can see all of the tickets by looking at the `Closed` tickets.
+Using source control also allows me to work in seperate branches for each task, and it also means I have backups incase things go wrong.
 
-#### Project Management
+Outside of repositories, I took lots of smaller notes on paper of things I wanted on this project, and I made sure I had my concept planning drawings close by as well as the video.
 
-### How I Would Improve and Optimize The Current Visual FX
+### How I Would Improve, Change and Optimize The Current Visual FX
 
-#### Planning Improvements and Optimization
-
-#### Shader Improvements and Optimization
+#### Shader Improvements and Changes
+For the shader, I would improve on the **rotation** and change the **time** aspect.
+Like mentioned above, to improve the rotation, I wouldn't be using so many magic numbers, I want it easy for the user to pick any angle, and to achieve what I wanted I would need to recreate the shader keeping the rotation in mind.
+For the time, I would get rid of the entire `Time` aspect, and instead make the shader change from a float, this way I could either program, or animate the shader parameter moving by changing the float, and being allowed to animate the shader means I can combine that with the particle effects and get something which fits together better, it would also mean I could animate the particles position according to the shaders position float instead of using the alpha swipe cut on the particles.
 
 #### Particle Improvements and Optimization
+There isn't much which I would change about the particles. 
+I don't like currently how the particles don't fully disappear when they reach the top of the car, I did try and make this happen by changing the size over lifetime in a specific way, and it would work, but get out of sync quickly, so this wasn't a good soution in the end, and it would be fixed with the time solution proposed above.
 
-### A Different Approach Cookie Cutout
-
-#### Planning Cookie Cutout
+### A Different Approach: Cookie Cutout
+<img src="Concept_Art/Concept_Art_Different_Approaches.png" alt="Different Approaches" style="width:100%" align="center"/>
+<sup><i>The cookie cutter approach is the top concept, the bottom left concept can be used for other things but not documented.</i></sup>
 
 #### Shader Ideas For Cookie Cutout
+For the shader for the cookie cutout I would do the following things:
+1. Have the same shader I currently have, but instead move the swipe on a float parameter instead of the time node.
+2. Apply the material shader to the model.
+3. Make a cube which will act as the `cut out`
+4. There are multiple approaches on how to do this next section
+   * Could add a script onto `cut out cube/mesh` which grabs the materials/model/tags for whatever items which needs to be spawned/despawned, and depending on the location of the cut out cube relative to the item being effected, it adjusts the amount cut out from the shader, this could be expensive if done on an update function as it would always be checking for collision, so to optimize this, there are a few different ways.
+      * The shader could be cut out at a particular time, like when a specific function is called, so it's not checking when it doesn't need to.
+      * Another approach which I think is alot better is if the cube touches either the top or the bottom of the mesh, it would spawn/despawn depending on where it touches and it could be cut out using a lerp instead of the actual cut out cube, and this could be calculated by getting the midpoint location of the mesh and calculating whether the cube is above or below that, or the cube could always be in the middle of the mesh, and if it moves up or down, it either spawns or despawns, and then snaps back into the middle so the user can do that again once the animation has finished playing.
+      * The same could be done just by calling a function in a script without even using a cube if we have access to the swipe float parameter on the shader.
+         * I would personally use a package in the Unity Asset Store called [DOTween](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) to control how the shader swipes as it's got a whole library of really nice tweens to use!
 
 #### Particle Ideas For Cookie Cutout
+If I have access to the swipe float parameter, I would use the Unity Animator to animate whether the particle is active or not and where the particles are, I feel this would give so much more impact to the feel of the VFX as I would be able to play around with timing of the whole effect alot more.
 
 ---
 
