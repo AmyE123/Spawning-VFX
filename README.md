@@ -1,5 +1,6 @@
 # FreeJam VFX Test
 A test for FreeJam for the Junior VFX role
+
 [Final Presentation Photo / Cover Photo]
 
 ## Table of Contents
@@ -92,7 +93,7 @@ So, I played around with noise shaders for a bit, until I got a cube pattern tha
 
 #### Rotation On The Shader
 I wanted to be able to use this shader from any angle. I can currently rotate the swipe part of the shader at any angle, but because of how I made the cube edges and the outline, it gets harder to swipe those well from a good angle, and it's mainly because for the outline and cube edges, I use the height parameter to move the cubes and outline along with the swipe.
-I managed to figure out how to get a perfect up and down swipe, as well as a 90 degree swipe for now, by using magic numbers, but it's not the best solution at all, it's not logical, and it's generally a mess, if I were to approach this again, I would think about the rotation much sooner.
+I managed to figure out how to get a perfect up and down swipe, as well as a 90 degree swipe for now, by using [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)), but it's not the best solution at all, it's not logical, and it's generally a mess, if I were to approach this again, I would think about the rotation much sooner.
 
 #### Cleaning Up The Shader
 <img src="Screenshots/Clean_Shader.png" alt="Cubes Shader" style="width:100%" align="center"/>
@@ -113,18 +114,55 @@ The cubes also looked distorted because of their position space as it was set to
 
 #### Analysis
 I really enjoyed making this shader, and I'm proud of the result, but there are a few things I would like to change about this!
+
 I think it would look a lot nicer if the cubes cut out the alpha instead of just overlay. It’s hard to tell it’s not doing this in the game though.
-I think this could be done if I passed the cubes through as alpha, but to do that properly I would need to cut the cubes out from a ring, similar to how I do the outline, and then cut them out of the alpha.
+This could be done if I passed the cubes through as alpha, but to do that properly I would need to cut the cubes out from a ring, similar to how I do the outline, and then cut them out of the alpha.
 
 ### Creating The Particle FX
 
 #### Creation Process
+I didn't end up documenting too much of the particle creation process, due to it just being alot of tweaking values to get the right effects.
+
+The main things I wanted to get right were:
+* The glow on the particles 
+
+I achieved this by attaching a material to the particles which had the same glow as the shader.
+
+* The particles coming from the bottom to the top, following the swipe of the holographic effect, as if it's filling in all of the mesh with the cubes. 
+
+I achieved this by making a specific particle shader, which swiped from the bottom to the top, just like the other shaders. It's not the best way to do this, as if you look very closely, you can see some particles get cut off, but I reduced how much of this which was visible by making the particles shrink over time.
+If I were to reapproach the project, this would be something I consider, as I was originally planning to animate the particles to follow the swipe, but because of how I'm handling the swipe, I'm unable to do that. I did attempt to animate the particles alongside the shader, but it didn't look right due to not getting the timing to sync up with the shaders' sine time.
+
+* The specific movement of the particles
+
+To get this right, I had alot of fun playing around with the noise parameter in the particles setting.
+
+* The particles spawning from the mesh of the object
+
+I made sure the particles spawned from the mesh of the car, and this looked really cool!
 
 #### Analysis
+The particles were great fun to put in alongside the shader, and I really like how it tied everything together, I could futher optimize this by making the 3D particles a 2D billboard, and it won't look too different.
 
 ### Developing and Presenting The Project
 
 #### The Visual FX Controller
+<img src="Screenshots/VFX_Controller.png" alt="Cubes Shader" style="width:100%" align="center"/>
+This was something which I really wanted to put into the project, I wanted some sort of controller for the VFX, where values could be tweaked, and it would be reflected during runtime in the game, this is so I can also put in buttons on the game to adjust the material properties.
+
+##### Mesh Renderers, Particle Material and Shader Material Instances Paramater
+These parameters are for **getting** materials which you want to adjust the properties for.
+The **Mesh Renderers** parameter is for any models with multiple textures and materials, in this case, I populated it with the cars mesh renderers, so when the game begins, the **Shader Material Instances** parameter populates with instances of the materials for the car.
+The **Particle Material** parameter is for the material which is on the particles.
+
+##### Rotation Data & Rotation
+Due to the rotation using [*magic numbers*](https://en.wikipedia.org/wiki/Magic_number_(programming)), I had to have specific numbers in the shader parameters to get it to work right, so instead of having the user confused and trying to get this to work right, I made a ScriptableObject called **VFXRotationProperties**, and this would include a float for the OutlineThickness and the Rotation in Degrees, so I made 2 of these data objects for 0 degrees and 90 degrees, and this was put into the Rotation Data array, this also helps so whenever I need to set the rotation in the code, I'm not using [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming)) inside of the code, which would just make things confusing to read.
+The Rotation parameter is just an enum of the different rotations which the player can pick between.
+If I were to approach this again, I would like rotation to be on a slider with a range 0 to 90, so the player can pick any angle for the rotation of the VFX.
+
+##### Shader and Particle Colours and Particle Rate
+These are pretty self-explainatory, but the colour parameters set the Shader and Particle colours, you could have these two completely different colours, or the same, the choice is up to the user!
+The particle rate controls the number of particles, and the default value is 500, as I think that looks best!
 
 #### Scene Presentation
 
