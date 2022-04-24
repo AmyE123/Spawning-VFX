@@ -35,10 +35,7 @@ To start the project, I needed to plan out how I was going to approach this test
 
 #### Initial Planning
 From just watching the video I was able to break down the main parts of the shader and particles easily! I broke this down at a high level to begin with, so my initial concept art was more of an overview of how I wanted to approach the shader for the swiping effect, with a brief look into the details of the edge glow, and into the particles, but that was all it was, a brief look, and doing this made me realise the swiping of the shader, without the edge glow is a good place to begin with the shader! It didn't take me long to sketch this out, it was just how I envisioned the result of the swiping to look, and whilst I was doing this, I had the idea to also draw in this concept the shader being able to swipe from *any* angle, not just 90 degrees, 180 degrees, etc… - Just as a note for myself to look into later!
-
 <img src="Concept_Art/Concept_Art.png" alt="Initial Concept Art" style="width:100%" align="center"/>
-
-
 
 #### Planning Throughout Production
 All the planning done after the initial planning was done during the production, after I noticed extra finer details like how the particle cubes weren’t 3d (or were they? I could never tell!), how the particles hover from top to bottom and how the shader would glow, this is all stuff which I noticed as I worked on different areas of the VFX, as my initial planning was more of a very high-level overlook of the effect.
@@ -61,6 +58,7 @@ One of the main things I noticed is the pattern which the particles are taking, 
 
 ##### Different Approaches & Optimizations Demonstration
 <img src="Concept_Art/Concept_Art_Different_Approaches.png" alt="Different Approaches" style="width:100%" align="center"/>
+Once I had finished the VFX, I was thinking of how I could improve and optimize it, as well as other approaches I could take, and I talk about this in more detail in the [How I Would Improve and Optimize The Current Visual FX](#how-i-would-improve-and-optimize-the-current-visual-fx) section, and the [A Different Approach Cookie Cutout](#a-different-approach-cookie-cutout) section of this document, but you can see the rough ideas here!
 
 #### Analysis
 
