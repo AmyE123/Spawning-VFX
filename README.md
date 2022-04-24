@@ -99,7 +99,22 @@ I managed to figure out how to get a perfect up and down swipe, as well as a 90 
 I added parameters on areas which I think the user should be able to customize, colours, textures, thickness of lines, speeds of swipes and rotations, amongst a few.
 And to make the shader easier for another person to understand, I added sticky notes, and documented the shader, much like I would document code!
 
+#### Issues and How They Were Resolved
+Once I had finished with the above, it all looked great in the main preview, and in the scene view! But I had one major issue - It didn’t look right in the game view!
+The swipe was working with the transparency, but I couldn’t see the emission, so I originally thought that maybe I didn’t have post processing turned on on the camera, but it didn’t end up being that it was just because my emission wasn’t high enough! 
+I went back into the slice shader graph and applied another multiplier to the outline which multiplied the emission and plugged that into the emission plug on the node, and then turned up the colour’s HDR intensity, and then everything looked alright!
+
+Another issue which I had is when I had the shader on both the sphere and the car, it wasn’t slicing equally, by that I mean it was fading the entire sphere, but only half of the car, and this would also be an issue for the separate parts of the car too, but this was something I immedietly knew how to fix, and all I had to do was set the position node to be in ‘Absolute World’ space for both the outline and the swipe.
+
+I had some small issues with getting the normal rotation to work with the edge cubes and the outline, but in the end it was because the tiling and offset were different for both of them, so I just had to separate them.
+
+The cubes looked a bit distorted when I began to play around with the noise, but a fix for that was to make the Voronoi node have a very small angle offset, but I couldn’t use 0, this felt quite hacky if I’m being honest, but it works.
+The cubes also looked distorted because of their position space as it was set to ‘absolute world’ like everything else in the shader, and to fix that I set just the space to be ‘view’ for just the cubes.
+
 #### Analysis
+I really enjoyed making this shader, and I'm proud of the result, but there are a few things I would like to change about this!
+I think it would look a lot nicer if the cubes cut out the alpha instead of just overlay. It’s hard to tell it’s not doing this in the game though.
+I think this could be done if I passed the cubes through as alpha, but to do that properly I would need to cut the cubes out from a ring, similar to how I do the outline, and then cut them out of the alpha.
 
 ### Creating The Particle FX
 
