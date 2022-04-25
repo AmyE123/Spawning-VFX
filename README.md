@@ -26,7 +26,10 @@ A test for FreeJam for the Junior VFX role
 ---
 
 ## Additional Information
-
+Thank you very much for letting me take this VFX test!
+In this documentation, you can read about the process I've taken for the test. 
+I've done a few extra things for the test, like the [Planning Stage](#planning-stage), [How I Would Improve, Change and Optimize The Current Visual FX](#how-i-would-improve-change-and-optimize-the-current-visual-fx) and [A Different Approach: Cookie Cutout](#a-different-approach-cookie-cutout) - so if you just want to read about the VFX stuff, that is under [Creating the Shader](#creating-the-shader), [Creating the Particle FX](#creating-the-particle-fx) and [Developing and Presenting the Project](#developing-and-presenting-the-project)!
+ 
 ---
 
 ## Project Documentation
@@ -164,8 +167,10 @@ If I were to approach this again, I would like rotation to be on a slider with a
 These are pretty self-explainatory, but the colour parameters set the Shader and Particle colours, you could have these two completely different colours, or the same, the choice is up to the user!
 The particle rate controls the number of particles, and the default value is 500, as I think that looks best!
 
-#### Scene Presentation
--- EMPTY
+#### Runtime Editor
+<img src="Screenshots/Runtime_Editor.png" alt="Cubes Shader" style="width:100%" align="center"/>
+As I wanted to have some way for the user to play with the values of the shaders and particles in-game, I put together a Runtime Editor for the VFX, including camera settings and VFX settings, as well as a setting to change objects to see what the shader looks like on other things.
+If I had more time, I would make the UI look nice, but you're able to toggle it on and off anyway!
 
 #### Project Management and Use of Source Control
 I decided it might a good idea to use source control for this project, so I could make use of all the different tools it offers, it also helps show my workflow and how I approach this test in a bit more detail.
