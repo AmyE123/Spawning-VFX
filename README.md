@@ -164,9 +164,6 @@ If I were to approach this again, I would like rotation to be on a slider with a
 These are pretty self-explainatory, but the colour parameters set the Shader and Particle colours, you could have these two completely different colours, or the same, the choice is up to the user!
 The particle rate controls the number of particles, and the default value is 500, as I think that looks best!
 
-#### Scene Presentation
--- EMPTY
-
 #### Project Management and Use of Source Control
 I decided it might a good idea to use source control for this project, so I could make use of all the different tools it offers, it also helps show my workflow and how I approach this test in a bit more detail.
 To break down my tasks so I'm not working on multiple things at the same time, I use the 'Issues' part of the Git Repository, and make myself tickets for each specific thing I need to do for this test, it also allows me to comment on the ticket with things that I want to change, or just make notes. You can see all of the tickets by looking at the `Closed` tickets.
