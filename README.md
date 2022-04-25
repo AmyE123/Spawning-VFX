@@ -1,5 +1,5 @@
 # FreeJam VFX Test
-A test for FreeJam for the Junior VFX role
+A test for the FreeJam Junior VFX role
 
 <img src="Screenshots/GIF.gif" alt="Cover Gif" style="width:100%" align="center"/>
 
