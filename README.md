@@ -1,7 +1,7 @@
 # FreeJam VFX Test
 A test for FreeJam for the Junior VFX role
 
-[Final Presentation Photo / Cover Photo]
+<img src="Screenshots/GIF.gif" alt="Cover Gif" style="width:100%" align="center"/>
 
 ## Table of Contents
 1. [Additional Information](#additional-information)
