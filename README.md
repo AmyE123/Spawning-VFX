@@ -2,7 +2,7 @@
 A test for the FreeJam Junior Technical Artist & VFX role
 
 <img src="Screenshots/GIF.gif" alt="Cover Gif" style="width:100%" align="center"/>
-<sup><i>The GIF is compressed and doesn't show the VFX in full detail.</i></sup>
+<sup><i>This GIF is compressed and doesn't show the VFX in full detail.</i></sup>
 
 
 ## Table of Contents
