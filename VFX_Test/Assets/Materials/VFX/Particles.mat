@@ -120,6 +120,6 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColour: {r: 511.99994, g: 24.125652, b: 0, a: 1}
+    - _GlowColour: {r: 511.99994, g: 88.460724, b: 0, a: 1}
     - _TextureColour: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

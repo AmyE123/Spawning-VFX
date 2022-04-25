@@ -15,13 +15,13 @@ public class VisualEffectController : MonoBehaviour
     [Header("Particle Properties")]
     [SerializeField] private ParticleSystem _particleSpawningParticles;
     [SerializeField] private Material _particleMaterial;
-    [SerializeField] [ColorUsage(true, true)] private Color _particleColour;
-    [SerializeField] private int _particleRate = 200;
+    
+    public int _particleRate = 200;
+    [ColorUsage(true, true)] public Color ParticleColour;
 
     [Header("Shader Properties")]
     [SerializeField] private List<Material> _shaderMaterialInstances;
-    [SerializeField] [ColorUsage(true, true)] private Color _shaderOutlineColour;
-
+    [ColorUsage(true, true)] public Color ShaderColour;
 
 
 
@@ -66,11 +66,11 @@ public class VisualEffectController : MonoBehaviour
 
     void SetVFXColour()
     {
-        _particleMaterial.SetColor("_GlowColour", _particleColour);
+        _particleMaterial.SetColor("_GlowColour", ParticleColour);
 
         foreach (Material m in _shaderMaterialInstances)
         {
-            m.SetColor("_GlowColour", _shaderOutlineColour);
+            m.SetColor("_GlowColour", ShaderColour);
         }
     }
 
