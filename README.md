@@ -1,5 +1,5 @@
-# FreeJam VFX Test
-A test for the FreeJam Junior Technical Artist & VFX role
+# Spawning VFX
+Spawning VFX made in Unity, challeging myself to make Concept Art, VFX and Technical Art tools
 
 <img src="Screenshots/GIF.gif" alt="Cover Gif" style="width:100%" align="center"/>
 <sup><i>This GIF is compressed and doesn't show the VFX in full detail.</i></sup>
@@ -28,11 +28,9 @@ A test for the FreeJam Junior Technical Artist & VFX role
 ---
 
 ## Additional Information
-Thank you very much for letting me take this VFX test!
+In this documentation, you can read about the process I've taken to make the Spawning VFX. 
 
-In this documentation, you can read about the process I've taken for the test. 
-
-I've done a few extra things for the test, like the [Planning Stage](#planning-stage), [How I Would Improve, Change and Optimize The Current Visual FX](#how-i-would-improve-change-and-optimize-the-current-visual-fx) and [A Different Approach: Cookie Cutout](#a-different-approach-cookie-cutout) 
+I've done a few extra things, like the [Planning Stage](#planning-stage), [How I Would Improve, Change and Optimize The Current Visual FX](#how-i-would-improve-change-and-optimize-the-current-visual-fx) and [A Different Approach: Cookie Cutout](#a-different-approach-cookie-cutout) 
 
 So, if you just want to read about the VFX stuff, that is under [Creating the Shader](#creating-the-shader), [Creating the Particle FX](#creating-the-particle-fx) and [Developing and Presenting the Project](#developing-and-presenting-the-project)!
  
@@ -41,14 +39,14 @@ So, if you just want to read about the VFX stuff, that is under [Creating the Sh
 ## Project Documentation
 
 ### Planning Stage
-To start the project, I needed to plan out how I was going to approach this test, I had a visual effect video as my first point of reference, but I needed to take a deeper look into this video and really try to *break down* what I'm making, and this is where concept art, and quick sketches come in handy!
+To start the project, I needed to plan out how I was going to approach this, I had a video of some spawning VFX as my first point of reference, but I needed to take a deeper look into this video and really try to *break down* what I'm making, and this is where concept art, and quick sketches come in handy!
 
 #### Initial Planning
 <img src="Concept_Art/Concept_Art.png" alt="Initial Concept Art" style="width:100%" align="center"/>
 From just watching the video I was able to break down the main parts of the shader and particles easily! I broke this down at a high level to begin with, so my initial concept art was more of an overview of how I wanted to approach the shader for the swiping effect, with a brief look into the details of the edge glow, and into the particles, but that was all it was, a brief look, and doing this made me realise the swiping of the shader, without the edge glow is a good place to begin with the shader! It didn't take me long to sketch this out, it was just how I envisioned the result of the swiping to look, and whilst I was doing this, I had the idea to also draw in this concept the shader being able to swipe from *any* angle, not just 90 degrees, 180 degrees, etc… - Just as a note for myself to look into later!
 
 #### Planning Throughout Production
-All the planning done after the initial planning was done during the production, after I noticed extra finer details like how the particle cubes weren’t 3d (or were they? I could never tell!), how the particles hover from top to bottom and how the shader would glow, this is all stuff which I noticed as I worked on different areas of the VFX, as my initial planning was more of a very high-level overlook of the effect.
+All the planning done after the initial planning was done during the production, after I noticed extra finer details in the video reference like how the particle cubes weren’t 3d (or were they? I could never tell!), how the particles hover from top to bottom and how the shader would glow, this is all stuff which I noticed as I worked on different areas of the VFX, as my initial planning was more of a very high-level overlook of the effect.
 
 ##### Outline Glow Planning
 <img src="Concept_Art/Concept_Art_Shader_Ideas.png" alt="Shader Ideas" style="width:100%" align="center"/>
@@ -177,13 +175,6 @@ The particle rate controls the number of particles, and the default value is 500
 <img src="Screenshots/Runtime_Editor.png" alt="Cubes Shader" style="width:100%" align="center"/>
 As I wanted to have some way for the user to play with the values of the shaders and particles in-game, I put together a Runtime Editor for the VFX, including camera settings and VFX settings, as well as a setting to change objects to see what the shader looks like on other things.
 If I had more time, I would make the UI look nice, but you're able to toggle it on and off anyway!
-
-#### Project Management and Use of Source Control
-I decided it might a good idea to use source control for this project, so I could make use of all the different tools it offers, it also helps show my workflow and how I approach this test in a bit more detail.
-To break down my tasks so I'm not working on multiple things at the same time, I use the 'Issues' part of the Git Repository, and make myself tickets for each specific thing I need to do for this test, it also allows me to comment on the ticket with things that I want to change, or just make notes. You can see all of the tickets by looking at the `Closed` tickets.
-Using source control also allows me to work in seperate branches for each task, and it also means I have backups incase things go wrong.
-
-Outside of repositories, I took lots of smaller notes on paper of things I wanted on this project, and I made sure I had my concept planning drawings close by as well as the video.
 
 ### How I Would Improve, Change and Optimize The Current Visual FX
 
