@@ -1,5 +1,5 @@
 # Spawning VFX
-Spawning VFX made in Unity, challeging myself to make Concept Art, VFX and Technical Art tools
+Spawning VFX made in Unity, involving the creation of Concept Art, VFX and Technical Art tools
 
 <img src="Screenshots/GIF.gif" alt="Cover Gif" style="width:100%" align="center"/>
 <sup><i>This GIF is compressed and doesn't show the VFX in full detail.</i></sup>
